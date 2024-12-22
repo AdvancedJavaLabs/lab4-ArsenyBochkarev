@@ -48,4 +48,6 @@
 Результатом работы является сам код, файл с результатами и экспериментальные данные по быстродействию работы написанного кода при изменении числа worker-ов / частей, на которые разбивается файл
 
 # How to run
-`$HADOOP_HOME/hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-3.4.1.jar -output ./output/ -mapper ./mapper.out -reducer ./reducer.out -input ./0.csv -input ./1.csv`
+1. Set up `JAVA_HOME`
+2. Set up `HADOOP_HOME`
+3. Run: `$HADOOP_HOME/bin/hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-3.4.1.jar -output ./output/ -mapper ./mapper.out -reducer ./reducer.out -input ./0.csv -input ./1.csv  -input ./2.csv -input ./3.csv -input ./4.csv -input ./5.csv -input ./6.csv -input ./7.csv`
