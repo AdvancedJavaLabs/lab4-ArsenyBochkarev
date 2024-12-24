@@ -23,7 +23,16 @@ books --- 4.45762e+09 --- 890948
 health & wellness --- 4.45408e+09 --- 890475	
 ```
 
-Time measurements
-- Regular run (8 splits): 48.408872295 sec
-- Every file splitted (16 splits): 48.411416791 sec
-- First file splitted into 4 (18 splits): 50.406687792 sec
+Time measurements:
+- 1 mapper (no `idmapper.cpp`, no `idreducer.cpp`)
+    - Regular run (8 splits): 48.408872295 sec
+    - Every file splitted (16 splits): 48.411416791 sec
+    - First file splitted into 4 (18 splits): 50.406687792 sec
+- 8 mappers:
+    - Regular run (8 splits): 50.729562055 sec
+    - Every file splitted (16 splits): 50.815924028 sec
+    - First file splitted into 4 (18 splits): 51.797463383 sec
+- 16 mappers:
+    - Regular run (8 splits): 51.724646618 sec
+    - Every file splitted (16 splits): 51.845694392 sec
+    - First file splitted into 4 (18 splits): 52.755290305 sec

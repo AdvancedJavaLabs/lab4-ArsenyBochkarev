@@ -50,4 +50,5 @@
 # How to run
 1. Set up `JAVA_HOME`
 2. Set up `HADOOP_HOME`
-3. Run: `$HADOOP_HOME/bin/hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-3.4.1.jar -output ./output/ -mapper ./mapper.out -reducer ./reducer.out -input ./0.csv -input ./1.csv  -input ./2.csv -input ./3.csv -input ./4.csv -input ./5.csv -input ./6.csv -input ./7.csv`
+3. Run: `$HADOOP_HOME/bin/hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-3.4.1.jar -Dmapred.reduce.tasks=16 -output ./output/ -mapper ./mapper.out -reducer ./reducer.out -input ./0.csv -input ./1.csv  -input ./2.csv -input ./3.csv -input ./4.csv -input ./5.csv -input ./6.csv -input ./7.csv`
+4. Run: `$HADOOP_HOME/bin/hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-3.4.1.jar -mapper ./idmapper.out -reducer ./idreducer.out -input ./tmp/ -output ./output`
